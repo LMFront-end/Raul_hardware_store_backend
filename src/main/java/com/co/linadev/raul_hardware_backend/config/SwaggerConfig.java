@@ -1,4 +1,4 @@
-package com.example.raul_hardware_store.config;
+package com.co.linadev.raul_hardware_backend.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
