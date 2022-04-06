@@ -1,7 +1,8 @@
 package com.co.linadev.raul_hardware_backend.application.usecases.product.implementations;
 
-import com.example.raul_hardware_store.application.usecases.product.interfaces.DeleteProduct;
-import com.example.raul_hardware_store.domain.repositories.ProductRepository;
+
+import com.co.linadev.raul_hardware_backend.application.usecases.product.interfaces.DeleteProduct;
+import com.co.linadev.raul_hardware_backend.domain.repositories.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
