@@ -1,9 +1,10 @@
 package com.co.linadev.raul_hardware_backend.application.usecases.supplier.implementations;
 
-import com.example.raul_hardware_store.application.mappers.SupplierMapper;
-import com.example.raul_hardware_store.application.usecases.supplier.interfaces.FindAllSuppliers;
-import com.example.raul_hardware_store.domain.dtos.SupplierDTO;
-import com.example.raul_hardware_store.domain.repositories.SupplierRepository;
+
+import com.co.linadev.raul_hardware_backend.application.mappers.SupplierMapper;
+import com.co.linadev.raul_hardware_backend.application.usecases.supplier.interfaces.FindAllSuppliers;
+import com.co.linadev.raul_hardware_backend.domain.dtos.SupplierDTO;
+import com.co.linadev.raul_hardware_backend.domain.repositories.SupplierRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
