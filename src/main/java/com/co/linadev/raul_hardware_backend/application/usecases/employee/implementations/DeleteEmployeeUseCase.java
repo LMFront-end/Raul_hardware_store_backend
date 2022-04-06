@@ -1,7 +1,8 @@
 package com.co.linadev.raul_hardware_backend.application.usecases.employee.implementations;
 
-import com.example.raul_hardware_store.application.usecases.employee.interfaces.DeleteEmployee;
-import com.example.raul_hardware_store.domain.repositories.EmployeeRepository;
+
+import com.co.linadev.raul_hardware_backend.application.usecases.employee.interfaces.DeleteEmployee;
+import com.co.linadev.raul_hardware_backend.domain.repositories.EmployeeRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
