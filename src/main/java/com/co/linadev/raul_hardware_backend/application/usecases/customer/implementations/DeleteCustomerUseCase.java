@@ -1,7 +1,8 @@
 package com.co.linadev.raul_hardware_backend.application.usecases.customer.implementations;
 
-import com.example.raul_hardware_store.application.usecases.customer.interfaces.DeleteCustomer;
-import com.example.raul_hardware_store.domain.repositories.CustomerRepository;
+
+import com.co.linadev.raul_hardware_backend.application.usecases.customer.interfaces.DeleteCustomer;
+import com.co.linadev.raul_hardware_backend.domain.repositories.CustomerRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
