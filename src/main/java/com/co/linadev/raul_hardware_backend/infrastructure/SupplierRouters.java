@@ -75,4 +75,12 @@ public class SupplierRouters {
                                 .bodyValue(response)));
     }
 
+    @Bean
+    public RouterFunction<ServerResponse> deleteAllDataSupplierRouterFunction(DeleteAllDataSupplierUseCase deleteAllDataSupplierUseCase){
+        return route(
+                DELETE("/api/delete_all_suppliers"),
+                request -> ServerResponse.ok()
+                        .body(BodyInserters.fromPublisher(deleteAllDataSupplierUseCase.deleteAll(),Void.class))
+        );
+    }
 }
