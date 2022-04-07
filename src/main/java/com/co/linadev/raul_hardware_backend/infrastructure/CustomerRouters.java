@@ -75,4 +75,13 @@ public class CustomerRouters {
                                 .bodyValue(response)));
     }
 
+    @Bean
+    public RouterFunction<ServerResponse> deleteAllDataCustomerRouterFunction(DeleteAllDataCustomerUserCase deleteAllDataCustomerUserCase){
+        return route(
+                DELETE("/api/delete_all_customer"),
+                request -> ServerResponse.ok()
+                        .body(BodyInserters.fromPublisher(deleteAllDataCustomerUserCase.deleteAll(),Void.class))
+        );
+    }
+
 }
