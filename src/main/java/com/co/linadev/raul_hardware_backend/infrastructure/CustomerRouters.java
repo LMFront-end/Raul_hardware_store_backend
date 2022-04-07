@@ -65,7 +65,7 @@ public class CustomerRouters {
     }
 
     @Bean
-    public RouterFunction<ServerResponse> fillcustomerDataRouterFunction(FillCustomerDataUseCase fillCustomerDataUseCase){
+    public RouterFunction<ServerResponse> fillCustomerDataRouterFunction(FillCustomerDataUseCase fillCustomerDataUseCase){
         return route(POST("api/customers/fillData").and(accept(MediaType.APPLICATION_JSON)),
                 request -> request.bodyToMono(new ParameterizedTypeReference<List<CustomerDTO>>() {})
                         .flatMapMany(fillCustomerDataUseCase::fillData)

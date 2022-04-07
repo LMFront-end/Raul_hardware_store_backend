@@ -1,17 +1,18 @@
 package com.co.linadev.raul_hardware_backend.infrastructure;
 
 
-import com.co.linadev.raul_hardware_backend.application.usecases.employee.implementations.CreateEmployeeUseCase;
-import com.co.linadev.raul_hardware_backend.application.usecases.employee.implementations.DeleteEmployeeUseCase;
-import com.co.linadev.raul_hardware_backend.application.usecases.employee.implementations.FindAllEmployeesUseCase;
-import com.co.linadev.raul_hardware_backend.application.usecases.employee.implementations.FindEmployeeByIdUseCase;
+import com.co.linadev.raul_hardware_backend.application.usecases.employee.implementations.*;
 import com.co.linadev.raul_hardware_backend.domain.dtos.EmployeeDTO;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.ServerResponse;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.springframework.web.reactive.function.server.RequestPredicates.*;
 import static org.springframework.web.reactive.function.server.RouterFunctions.route;
@@ -61,6 +62,17 @@ public class EmployeeRouters {
                                 .fromPublisher(findEmployeeByIdUseCase
                                         .findById(request.pathVariable("id")), EmployeeDTO.class))
         );
+    }
+
+    @Bean
+    public RouterFunction<ServerResponse> fillEmployeeDataRouterFunction(FillEmployeeDataUseCase fillEmployeeDataUseCase){
+        return route(POST("api/employees/fillData").and(accept(MediaType.APPLICATION_JSON)),
+                request -> request.bodyToMono(new ParameterizedTypeReference<List<EmployeeDTO>>() {})
+                        .flatMapMany(fillEmployeeDataUseCase::fillData)
+                        .collect(Collectors.toList())
+                        .flatMap(response -> ServerResponse.ok()
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .bodyValue(response)));
     }
 
 }
