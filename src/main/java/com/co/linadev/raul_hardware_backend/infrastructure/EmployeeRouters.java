@@ -75,4 +75,13 @@ public class EmployeeRouters {
                                 .bodyValue(response)));
     }
 
+    @Bean
+    public RouterFunction<ServerResponse> deleteAllDataEmployeeRouterFunction(DeleteAllDataEmployeeUseCase deleteAllDataEmployeeUseCase){
+        return route(
+                DELETE("/api/delete_all_employees"),
+                request -> ServerResponse.ok()
+                        .body(BodyInserters.fromPublisher(deleteAllDataEmployeeUseCase.deleteAll(),Void.class))
+        );
+    }
+
 }
