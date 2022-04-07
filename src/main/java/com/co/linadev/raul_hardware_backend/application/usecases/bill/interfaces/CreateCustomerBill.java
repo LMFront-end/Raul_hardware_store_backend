@@ -6,6 +6,6 @@ import reactor.core.publisher.Mono;
 
 @FunctionalInterface
 public interface
-CreateBill {
+CreateCustomerBill {
     Mono<CustomerBillDTO> create(CustomerBillDTO billDTO);
 }

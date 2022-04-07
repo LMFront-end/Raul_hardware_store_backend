@@ -1,11 +1,9 @@
 package com.co.linadev.raul_hardware_backend.infrastructure;
 
 
-import com.co.linadev.raul_hardware_backend.application.usecases.bill.implementations.CreateBillUseCase;
-import com.co.linadev.raul_hardware_backend.application.usecases.bill.implementations.DeleteBillUseCase;
-import com.co.linadev.raul_hardware_backend.application.usecases.bill.implementations.FindAllBillsUseCase;
-import com.co.linadev.raul_hardware_backend.application.usecases.bill.implementations.FindBillByIdUseCase;
+import com.co.linadev.raul_hardware_backend.application.usecases.bill.implementations.*;
 import com.co.linadev.raul_hardware_backend.domain.dtos.CustomerBillDTO;
+import com.co.linadev.raul_hardware_backend.domain.dtos.SupplierBillDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
@@ -30,19 +28,21 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 public class BillRouters {
 
     @Bean
-    @RouterOperations(@RouterOperation(path = "/api/bills/create"
-            , produces = {
-            MediaType.APPLICATION_JSON_VALUE}, method = RequestMethod.POST, beanClass = CreateBillUseCase.class, beanMethod = "updateEmployee",
-            operation = @Operation(operationId = "updateEmployee", responses = {
-                    @ApiResponse(responseCode = "200", description = "successful operation", content = @Content(schema = @Schema(implementation = CustomerBillDTO.class))),
-                    @ApiResponse(responseCode = "404", description = "Bill not found")}, parameters = {
-                    @Parameter(in = ParameterIn.PATH, name = "employeeId")}
-                    , requestBody = @RequestBody(content = @Content(schema = @Schema(implementation = CustomerBillDTO.class))))
-    ))
-    public RouterFunction<ServerResponse> createBillRouterFunction(CreateBillUseCase createBillUseCase){
-        return route(POST("api/bills/create").and(accept(MediaType.APPLICATION_JSON)),
+    public RouterFunction<ServerResponse> createCustomerBillRouterFunction(CreateCustomerBillUseCase createBillUseCase){
+        return route(POST("api/bills/customer/create").and(accept(MediaType.APPLICATION_JSON)),
                 request -> request.bodyToMono(CustomerBillDTO.class)
                         .flatMap(createBillUseCase::create)
+                        .flatMap(response -> ServerResponse.ok()
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .bodyValue(response))
+        );
+    }
+
+    @Bean
+    public RouterFunction<ServerResponse> createSupplierBillRouterFunction(CreateSupplierBillUseCase createSupplierBillUseCase){
+        return route(POST("api/bills/supplier/create").and(accept(MediaType.APPLICATION_JSON)),
+                request -> request.bodyToMono(SupplierBillDTO.class)
+                        .flatMap(createSupplierBillUseCase::create)
                         .flatMap(response -> ServerResponse.ok()
                                 .contentType(MediaType.APPLICATION_JSON)
                                 .bodyValue(response))
@@ -79,6 +79,28 @@ public class BillRouters {
                         .body(BodyInserters
                                 .fromPublisher(findBillByIdUseCase
                                         .findById(request.pathVariable("id")), CustomerBillDTO.class))
+        );
+    }
+
+    @Bean
+    public RouterFunction<ServerResponse> findAllCustomerBillsRouterFunction(FindAllCustomerBillsUseCase findAllCustomerBillsUseCase){
+        return route(GET("api/bills/customers/find"),
+                request -> ServerResponse.ok()
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .body(BodyInserters
+                                .fromPublisher(findAllCustomerBillsUseCase
+                                        .findAll(), CustomerBillDTO.class))
+        );
+    }
+
+    @Bean
+    public RouterFunction<ServerResponse> findAllSupplierBillsRouterFunction(FindAllSupplierBillsUseCase findAllSupplierBillsUseCase){
+        return route(GET("api/bills/suppliers/find"),
+                request -> ServerResponse.ok()
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .body(BodyInserters
+                                .fromPublisher(findAllSupplierBillsUseCase
+                                        .findAll(), SupplierBillDTO.class))
         );
     }
 
