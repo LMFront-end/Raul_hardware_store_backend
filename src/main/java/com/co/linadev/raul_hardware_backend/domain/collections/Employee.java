@@ -11,6 +11,9 @@ public class Employee {
     @Id
     private final String id;
     private final String name;
+    private final String email;
+    private final Integer age;
+    private final String gender;
     private final String phoneNumber;
     private final String identityDocument;
 
