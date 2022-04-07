@@ -12,14 +12,20 @@ public class SupplierMapper {
 
     public Function<Supplier, SupplierDTO> mapToDto(){
         return supplier -> new SupplierDTO(supplier.getId(),
-                                            supplier.getName(),
-                                            supplier.getIdentityDocument()
+                supplier.getName(),
+                supplier.getEmail(),
+                supplier.getCountry(),
+                supplier.getCurrency(),
+                supplier.getIdentityDocument()
         );
     }
 
     public Function<SupplierDTO, Supplier> mapToCollection(){
         return supplierDTO -> new Supplier(supplierDTO.getId(),
                 supplierDTO.getName(),
+                supplierDTO.getEmail(),
+                supplierDTO.getCountry(),
+                supplierDTO.getCurrency(),
                 supplierDTO.getIdentityDocument()
         );
     }
