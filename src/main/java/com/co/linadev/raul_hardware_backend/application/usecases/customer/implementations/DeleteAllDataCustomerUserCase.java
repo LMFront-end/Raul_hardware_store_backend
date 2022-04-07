@@ -8,7 +8,7 @@ import reactor.core.publisher.Mono;
 
 @Service
 @RequiredArgsConstructor
-public class DeleteAllDataUserCase implements DeleteAllDataCustomer {
+public class DeleteAllDataCustomerUserCase implements DeleteAllDataCustomer {
 
     private final CustomerRepository customerRepository;
 
