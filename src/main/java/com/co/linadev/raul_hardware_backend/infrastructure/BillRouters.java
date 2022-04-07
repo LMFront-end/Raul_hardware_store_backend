@@ -5,7 +5,7 @@ import com.co.linadev.raul_hardware_backend.application.usecases.bill.implementa
 import com.co.linadev.raul_hardware_backend.application.usecases.bill.implementations.DeleteBillUseCase;
 import com.co.linadev.raul_hardware_backend.application.usecases.bill.implementations.FindAllBillsUseCase;
 import com.co.linadev.raul_hardware_backend.application.usecases.bill.implementations.FindBillByIdUseCase;
-import com.co.linadev.raul_hardware_backend.domain.dtos.BillDTO;
+import com.co.linadev.raul_hardware_backend.domain.dtos.CustomerBillDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
@@ -34,14 +34,14 @@ public class BillRouters {
             , produces = {
             MediaType.APPLICATION_JSON_VALUE}, method = RequestMethod.POST, beanClass = CreateBillUseCase.class, beanMethod = "updateEmployee",
             operation = @Operation(operationId = "updateEmployee", responses = {
-                    @ApiResponse(responseCode = "200", description = "successful operation", content = @Content(schema = @Schema(implementation = BillDTO.class))),
+                    @ApiResponse(responseCode = "200", description = "successful operation", content = @Content(schema = @Schema(implementation = CustomerBillDTO.class))),
                     @ApiResponse(responseCode = "404", description = "Bill not found")}, parameters = {
                     @Parameter(in = ParameterIn.PATH, name = "employeeId")}
-                    , requestBody = @RequestBody(content = @Content(schema = @Schema(implementation = BillDTO.class))))
+                    , requestBody = @RequestBody(content = @Content(schema = @Schema(implementation = CustomerBillDTO.class))))
     ))
     public RouterFunction<ServerResponse> createBillRouterFunction(CreateBillUseCase createBillUseCase){
         return route(POST("api/bills/create").and(accept(MediaType.APPLICATION_JSON)),
-                request -> request.bodyToMono(BillDTO.class)
+                request -> request.bodyToMono(CustomerBillDTO.class)
                         .flatMap(createBillUseCase::create)
                         .flatMap(response -> ServerResponse.ok()
                                 .contentType(MediaType.APPLICATION_JSON)
@@ -67,7 +67,7 @@ public class BillRouters {
                         .contentType(MediaType.APPLICATION_JSON)
                         .body(BodyInserters
                                 .fromPublisher(findAllBillsUseCase
-                                        .findAll(), BillDTO.class))
+                                        .findAll(), CustomerBillDTO.class))
         );
     }
 
@@ -78,7 +78,7 @@ public class BillRouters {
                         .contentType(MediaType.APPLICATION_JSON)
                         .body(BodyInserters
                                 .fromPublisher(findBillByIdUseCase
-                                        .findById(request.pathVariable("id")), BillDTO.class))
+                                        .findById(request.pathVariable("id")), CustomerBillDTO.class))
         );
     }
 

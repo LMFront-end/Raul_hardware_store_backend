@@ -6,15 +6,12 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class BillDTO {
+public class SupplierBillDTO {
 
     private String id;
-    private String employeeId;
-    private String customerId;
+    private String supplierId;
     private LocalDateTime dateTime;
-
 }

@@ -3,7 +3,7 @@ package com.co.linadev.raul_hardware_backend.application.usecases.bill.implement
 
 import com.co.linadev.raul_hardware_backend.application.mappers.BillMapper;
 import com.co.linadev.raul_hardware_backend.application.usecases.bill.interfaces.FindAllBills;
-import com.co.linadev.raul_hardware_backend.domain.dtos.BillDTO;
+import com.co.linadev.raul_hardware_backend.domain.dtos.CustomerBillDTO;
 import com.co.linadev.raul_hardware_backend.domain.repositories.BillRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -18,7 +18,7 @@ public class FindAllBillsUseCase implements FindAllBills {
     private final BillMapper billMapper;
 
     @Override
-    public Flux<BillDTO> findAll() {
-        return billRepository.findAll().map(billMapper.mapToDto());
+    public Flux<CustomerBillDTO> findAll() {
+        return billRepository.findAll().map(billMapper.mapToCustomerBillDto());
     }
 }

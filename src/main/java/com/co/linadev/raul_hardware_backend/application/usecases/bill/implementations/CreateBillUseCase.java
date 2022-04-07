@@ -3,7 +3,7 @@ package com.co.linadev.raul_hardware_backend.application.usecases.bill.implement
 import com.co.linadev.raul_hardware_backend.application.mappers.BillMapper;
 import com.co.linadev.raul_hardware_backend.application.usecases.bill.interfaces.CreateBill;
 
-import com.co.linadev.raul_hardware_backend.domain.dtos.BillDTO;
+import com.co.linadev.raul_hardware_backend.domain.dtos.CustomerBillDTO;
 import com.co.linadev.raul_hardware_backend.domain.repositories.BillRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -17,8 +17,8 @@ public class CreateBillUseCase implements CreateBill {
     private final BillMapper billMapper;
 
     @Override
-    public Mono<BillDTO> create(BillDTO billDTO) {
-        return billRepository.save(billMapper.mapToCollection().apply(billDTO))
-                .map(billMapper.mapToDto());
+    public Mono<CustomerBillDTO> create(CustomerBillDTO billDTO) {
+        return billRepository.save(billMapper.mapToCollectionFromCustomerBill().apply(billDTO))
+                .map(billMapper.mapToCustomerBillDto());
     }
 }

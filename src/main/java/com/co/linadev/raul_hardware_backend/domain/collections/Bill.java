@@ -14,6 +14,7 @@ public class Bill {
     private final String id;
     private final String employeeId;
     private final String customerId;
+    private final String supplierId;
     private final LocalDateTime date;
 
 }
