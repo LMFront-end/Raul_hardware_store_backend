@@ -1,6 +1,5 @@
 # Raul's Hardware Store(_Spring boot, webflux, Router Function Mongo DB_)
 
-_Simulación del funcionamiento de una biblioteca utilizando spring boot y Mongo DB._
 
 ## Ejecución del proyecto ⌨️
 _`Mongo db: localhost:27017`_
