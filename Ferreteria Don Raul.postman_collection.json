@@ -1,0 +1,742 @@
+{
+	"info": {
+		"_postman_id": "68a81f5c-75f8-4cb9-8b3a-ad65961d3808",
+		"name": "Ferreteria Don Raul",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Bills",
+			"item": [
+				{
+					"name": "Create Customer Bill",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeId\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/bills/customer/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"bills",
+								"customer",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Supplier Bill",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeId\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/bills/supplier/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"bills",
+								"supplier",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Bill",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/bills/delete/624a470f1f8ec13640a03e71",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"bills",
+								"delete",
+								"624a470f1f8ec13640a03e71"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Bill by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/bills/find/624a48581f8ec13640a03e75",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"bills",
+								"find",
+								"624a48581f8ec13640a03e75"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Bills",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/bills",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"bills"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Customer Bills",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/bills/customers/find",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"bills",
+								"customers",
+								"find"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Suppliers Bills",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/bills/customers/find",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"bills",
+								"customers",
+								"find"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "Create Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"lina\",\r\n    \"phoneNumber\": \"3003003030\",\r\n    \"identityDocument\": \"1000555888\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/customers/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customers",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/customers/delete/624a46e81f8ec13640a03e70",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customers",
+								"delete",
+								"624a46e81f8ec13640a03e70"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Customer by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/customers/find/624a48581f8ec13640a03e75",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customers",
+								"find",
+								"624a48581f8ec13640a03e75"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/customers",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fill Customer Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n  \"name\": \"Zoolab\",\r\n  \"email\": \"hplacidi0@pen.io\",\r\n  \"age\": 50,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Mem Martins\",\r\n  \"phoneNumber\": \"+351 (251) 160-9041\",\r\n  \"identityDocument\": \"215-633-2244\"\r\n}, {\r\n  \"name\": \"Mat Lam Tam\",\r\n  \"email\": \"ahrinishin1@mozilla.org\",\r\n  \"age\": 50,\r\n  \"gender\": \"Polygender\",\r\n  \"city\": \"Oltinko’l\",\r\n  \"phoneNumber\": \"+998 (935) 313-8730\",\r\n  \"identityDocument\": \"297-993-8043\"\r\n}, {\r\n  \"name\": \"Redhold\",\r\n  \"email\": \"erevitt2@ning.com\",\r\n  \"age\": 48,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Budapest\",\r\n  \"phoneNumber\": \"+36 (825) 173-6969\",\r\n  \"identityDocument\": \"979-294-3712\"\r\n}, {\r\n  \"name\": \"Lotstring\",\r\n  \"email\": \"clewin3@360.cn\",\r\n  \"age\": 45,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Stavyshche\",\r\n  \"phoneNumber\": \"+380 (322) 987-9075\",\r\n  \"identityDocument\": \"647-918-0556\"\r\n}, {\r\n  \"name\": \"Hatity\",\r\n  \"email\": \"obrookhouse4@hhs.gov\",\r\n  \"age\": 75,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Akron\",\r\n  \"phoneNumber\": \"+1 (330) 324-0282\",\r\n  \"identityDocument\": \"764-341-0643\"\r\n}, {\r\n  \"name\": \"Transcof\",\r\n  \"email\": \"gmcilhatton5@gmpg.org\",\r\n  \"age\": 44,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Irkutsk\",\r\n  \"phoneNumber\": \"+7 (690) 286-8838\",\r\n  \"identityDocument\": \"188-309-9161\"\r\n}, {\r\n  \"name\": \"Sub-Ex\",\r\n  \"email\": \"cpetkov6@1688.com\",\r\n  \"age\": 65,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Tanggung\",\r\n  \"phoneNumber\": \"+62 (717) 867-2036\",\r\n  \"identityDocument\": \"809-737-1765\"\r\n}, {\r\n  \"name\": \"Viva\",\r\n  \"email\": \"abullivent7@auda.org.au\",\r\n  \"age\": 76,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Josefina\",\r\n  \"phoneNumber\": \"+63 (160) 949-5976\",\r\n  \"identityDocument\": \"911-801-9270\"\r\n}, {\r\n  \"name\": \"Greenlam\",\r\n  \"email\": \"jseverns8@dagondesign.com\",\r\n  \"age\": 27,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Novi Kneževac\",\r\n  \"phoneNumber\": \"+381 (149) 787-4663\",\r\n  \"identityDocument\": \"753-224-5916\"\r\n}, {\r\n  \"name\": \"Cookley\",\r\n  \"email\": \"crossetti9@cpanel.net\",\r\n  \"age\": 76,\r\n  \"gender\": \"Agender\",\r\n  \"city\": \"Pidvolochys’k\",\r\n  \"phoneNumber\": \"+380 (551) 924-3805\",\r\n  \"identityDocument\": \"983-336-5547\"\r\n}, {\r\n  \"name\": \"Solarbreeze\",\r\n  \"email\": \"fwenderotta@harvard.edu\",\r\n  \"age\": 78,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Căuşeni\",\r\n  \"phoneNumber\": \"+373 (947) 405-4325\",\r\n  \"identityDocument\": \"114-536-9682\"\r\n}, {\r\n  \"name\": \"Mat Lam Tam\",\r\n  \"email\": \"walabastarb@php.net\",\r\n  \"age\": 40,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Changchi\",\r\n  \"phoneNumber\": \"+86 (327) 325-1494\",\r\n  \"identityDocument\": \"228-470-5246\"\r\n}, {\r\n  \"name\": \"Konklab\",\r\n  \"email\": \"emapstonec@live.com\",\r\n  \"age\": 65,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Vetlanda\",\r\n  \"phoneNumber\": \"+46 (876) 541-0740\",\r\n  \"identityDocument\": \"474-855-6409\"\r\n}, {\r\n  \"name\": \"Flexidy\",\r\n  \"email\": \"tgroobyd@msu.edu\",\r\n  \"age\": 51,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Paleran\",\r\n  \"phoneNumber\": \"+62 (812) 384-0649\",\r\n  \"identityDocument\": \"643-658-6251\"\r\n}, {\r\n  \"name\": \"Prodder\",\r\n  \"email\": \"santonoyeve@diigo.com\",\r\n  \"age\": 73,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Magetlegar\",\r\n  \"phoneNumber\": \"+62 (231) 839-2065\",\r\n  \"identityDocument\": \"896-873-3473\"\r\n}, {\r\n  \"name\": \"Zontrax\",\r\n  \"email\": \"bextilf@ameblo.jp\",\r\n  \"age\": 73,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Timashëvsk\",\r\n  \"phoneNumber\": \"+7 (311) 963-4563\",\r\n  \"identityDocument\": \"854-597-8444\"\r\n}, {\r\n  \"name\": \"Fix San\",\r\n  \"email\": \"bblancheg@mashable.com\",\r\n  \"age\": 22,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Tha Muang\",\r\n  \"phoneNumber\": \"+66 (942) 344-0820\",\r\n  \"identityDocument\": \"258-909-9002\"\r\n}, {\r\n  \"name\": \"Kanlam\",\r\n  \"email\": \"mlangwadeh@examiner.com\",\r\n  \"age\": 72,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Pilar\",\r\n  \"phoneNumber\": \"+63 (307) 183-4720\",\r\n  \"identityDocument\": \"157-774-9517\"\r\n}, {\r\n  \"name\": \"Redhold\",\r\n  \"email\": \"twhittoni@wsj.com\",\r\n  \"age\": 78,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Pedro Betancourt\",\r\n  \"phoneNumber\": \"+53 (906) 683-9586\",\r\n  \"identityDocument\": \"575-766-0429\"\r\n}, {\r\n  \"name\": \"Cardguard\",\r\n  \"email\": \"wnewlandsj@oaic.gov.au\",\r\n  \"age\": 48,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Indramayu\",\r\n  \"phoneNumber\": \"+62 (558) 258-7947\",\r\n  \"identityDocument\": \"473-876-3492\"\r\n}, {\r\n  \"name\": \"Aerified\",\r\n  \"email\": \"jtrouncek@mac.com\",\r\n  \"age\": 50,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Dūkštas\",\r\n  \"phoneNumber\": \"+370 (673) 225-7998\",\r\n  \"identityDocument\": \"515-981-3009\"\r\n}, {\r\n  \"name\": \"Mat Lam Tam\",\r\n  \"email\": \"omcbrydel@mozilla.com\",\r\n  \"age\": 55,\r\n  \"gender\": \"Agender\",\r\n  \"city\": \"Fier\",\r\n  \"phoneNumber\": \"+355 (181) 965-7779\",\r\n  \"identityDocument\": \"219-736-8311\"\r\n}, {\r\n  \"name\": \"Keylex\",\r\n  \"email\": \"skuhnertm@nyu.edu\",\r\n  \"age\": 33,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Mullsjö\",\r\n  \"phoneNumber\": \"+46 (966) 875-6455\",\r\n  \"identityDocument\": \"680-573-5579\"\r\n}, {\r\n  \"name\": \"Lotstring\",\r\n  \"email\": \"ghelbeckn@narod.ru\",\r\n  \"age\": 58,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Yuanda\",\r\n  \"phoneNumber\": \"+86 (278) 178-3425\",\r\n  \"identityDocument\": \"519-156-1240\"\r\n}, {\r\n  \"name\": \"Otcom\",\r\n  \"email\": \"swallentino@newyorker.com\",\r\n  \"age\": 29,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"León\",\r\n  \"phoneNumber\": \"+505 (485) 276-4128\",\r\n  \"identityDocument\": \"201-176-0974\"\r\n}, {\r\n  \"name\": \"Viva\",\r\n  \"email\": \"atregiddop@cafepress.com\",\r\n  \"age\": 37,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Yangfang\",\r\n  \"phoneNumber\": \"+86 (363) 607-5799\",\r\n  \"identityDocument\": \"540-410-9034\"\r\n}, {\r\n  \"name\": \"Viva\",\r\n  \"email\": \"srenboldq@mtv.com\",\r\n  \"age\": 63,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Kāmyārān\",\r\n  \"phoneNumber\": \"+98 (828) 381-9616\",\r\n  \"identityDocument\": \"490-573-7100\"\r\n}, {\r\n  \"name\": \"Greenlam\",\r\n  \"email\": \"rlonglandr@oakley.com\",\r\n  \"age\": 60,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Xia Zanggor\",\r\n  \"phoneNumber\": \"+86 (874) 506-8795\",\r\n  \"identityDocument\": \"323-608-4208\"\r\n}, {\r\n  \"name\": \"Keylex\",\r\n  \"email\": \"nlabeuils@apache.org\",\r\n  \"age\": 29,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Trawniki\",\r\n  \"phoneNumber\": \"+48 (880) 743-2900\",\r\n  \"identityDocument\": \"987-651-2259\"\r\n}, {\r\n  \"name\": \"Biodex\",\r\n  \"email\": \"shansardt@hibu.com\",\r\n  \"age\": 78,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Hila\",\r\n  \"phoneNumber\": \"+62 (844) 984-1197\",\r\n  \"identityDocument\": \"668-631-1210\"\r\n}, {\r\n  \"name\": \"Tampflex\",\r\n  \"email\": \"tgillmanu@thetimes.co.uk\",\r\n  \"age\": 76,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Ekpoma\",\r\n  \"phoneNumber\": \"+234 (839) 932-9856\",\r\n  \"identityDocument\": \"978-279-5290\"\r\n}, {\r\n  \"name\": \"Andalax\",\r\n  \"email\": \"gmallebonev@timesonline.co.uk\",\r\n  \"age\": 35,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Svoge\",\r\n  \"phoneNumber\": \"+359 (259) 505-3494\",\r\n  \"identityDocument\": \"785-110-2316\"\r\n}, {\r\n  \"name\": \"Gembucket\",\r\n  \"email\": \"rwissbyw@amazon.com\",\r\n  \"age\": 59,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Cabrero\",\r\n  \"phoneNumber\": \"+56 (869) 454-8639\",\r\n  \"identityDocument\": \"735-296-9400\"\r\n}, {\r\n  \"name\": \"Andalax\",\r\n  \"email\": \"kjeandetx@wufoo.com\",\r\n  \"age\": 57,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Kibiti\",\r\n  \"phoneNumber\": \"+255 (815) 422-0702\",\r\n  \"identityDocument\": \"594-443-8983\"\r\n}, {\r\n  \"name\": \"Ventosanzap\",\r\n  \"email\": \"lchancellory@miitbeian.gov.cn\",\r\n  \"age\": 33,\r\n  \"gender\": \"Genderqueer\",\r\n  \"city\": \"Lahad Datu\",\r\n  \"phoneNumber\": \"+60 (331) 919-1884\",\r\n  \"identityDocument\": \"675-778-4159\"\r\n}, {\r\n  \"name\": \"Alphazap\",\r\n  \"email\": \"dridgesz@dell.com\",\r\n  \"age\": 57,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Ewarton\",\r\n  \"phoneNumber\": \"+1 (607) 490-5415\",\r\n  \"identityDocument\": \"217-766-7171\"\r\n}, {\r\n  \"name\": \"Bamity\",\r\n  \"email\": \"sbafford10@sphinn.com\",\r\n  \"age\": 67,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Panzhuang\",\r\n  \"phoneNumber\": \"+86 (419) 602-7405\",\r\n  \"identityDocument\": \"377-649-8891\"\r\n}, {\r\n  \"name\": \"Biodex\",\r\n  \"email\": \"rpollak11@ucla.edu\",\r\n  \"age\": 22,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Tallahassee\",\r\n  \"phoneNumber\": \"+1 (850) 984-3508\",\r\n  \"identityDocument\": \"169-361-4596\"\r\n}, {\r\n  \"name\": \"Alphazap\",\r\n  \"email\": \"aseargeant12@bbb.org\",\r\n  \"age\": 42,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Plymouth\",\r\n  \"phoneNumber\": \"+1 (855) 989-3376\",\r\n  \"identityDocument\": \"611-998-9342\"\r\n}, {\r\n  \"name\": \"Prodder\",\r\n  \"email\": \"jbebis13@tmall.com\",\r\n  \"age\": 69,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Aradac\",\r\n  \"phoneNumber\": \"+381 (371) 314-0692\",\r\n  \"identityDocument\": \"514-917-8504\"\r\n}, {\r\n  \"name\": \"Tempsoft\",\r\n  \"email\": \"khempel14@w3.org\",\r\n  \"age\": 42,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Maagnas\",\r\n  \"phoneNumber\": \"+63 (996) 973-8652\",\r\n  \"identityDocument\": \"182-728-5957\"\r\n}, {\r\n  \"name\": \"Matsoft\",\r\n  \"email\": \"rhartwright15@merriam-webster.com\",\r\n  \"age\": 38,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Jianxin\",\r\n  \"phoneNumber\": \"+86 (241) 693-7889\",\r\n  \"identityDocument\": \"690-390-6518\"\r\n}, {\r\n  \"name\": \"Redhold\",\r\n  \"email\": \"lshurmer16@technorati.com\",\r\n  \"age\": 38,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Sertânia\",\r\n  \"phoneNumber\": \"+55 (377) 506-1066\",\r\n  \"identityDocument\": \"545-903-9107\"\r\n}, {\r\n  \"name\": \"Temp\",\r\n  \"email\": \"afolliott17@usnews.com\",\r\n  \"age\": 32,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Baracoa\",\r\n  \"phoneNumber\": \"+53 (124) 665-6338\",\r\n  \"identityDocument\": \"277-333-7200\"\r\n}, {\r\n  \"name\": \"Toughjoyfax\",\r\n  \"email\": \"astandbrook18@vistaprint.com\",\r\n  \"age\": 49,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Estribeiro\",\r\n  \"phoneNumber\": \"+351 (455) 103-8180\",\r\n  \"identityDocument\": \"481-527-8173\"\r\n}, {\r\n  \"name\": \"Sonair\",\r\n  \"email\": \"bughini19@xinhuanet.com\",\r\n  \"age\": 36,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Crossmolina\",\r\n  \"phoneNumber\": \"+353 (448) 322-2029\",\r\n  \"identityDocument\": \"580-198-4758\"\r\n}, {\r\n  \"name\": \"Fix San\",\r\n  \"email\": \"mmouan1a@cdbaby.com\",\r\n  \"age\": 36,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Skalbmierz\",\r\n  \"phoneNumber\": \"+48 (646) 411-0082\",\r\n  \"identityDocument\": \"919-143-0349\"\r\n}, {\r\n  \"name\": \"Span\",\r\n  \"email\": \"epettendrich1b@addthis.com\",\r\n  \"age\": 33,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Sima\",\r\n  \"phoneNumber\": \"+269 (179) 792-9414\",\r\n  \"identityDocument\": \"809-560-6981\"\r\n}, {\r\n  \"name\": \"Konklux\",\r\n  \"email\": \"vdulieu1c@squarespace.com\",\r\n  \"age\": 35,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Komatsushimachō\",\r\n  \"phoneNumber\": \"+81 (459) 691-4878\",\r\n  \"identityDocument\": \"292-482-3551\"\r\n}, {\r\n  \"name\": \"Wrapsafe\",\r\n  \"email\": \"cclementel1d@quantcast.com\",\r\n  \"age\": 67,\r\n  \"gender\": \"Polygender\",\r\n  \"city\": \"Curug\",\r\n  \"phoneNumber\": \"+62 (654) 929-8392\",\r\n  \"identityDocument\": \"329-903-2236\"\r\n}, {\r\n  \"name\": \"Transcof\",\r\n  \"email\": \"odawidowsky1e@oaic.gov.au\",\r\n  \"age\": 34,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Mamanguape\",\r\n  \"phoneNumber\": \"+55 (245) 193-2739\",\r\n  \"identityDocument\": \"244-824-2600\"\r\n}, {\r\n  \"name\": \"Toughjoyfax\",\r\n  \"email\": \"lbenbough1f@vistaprint.com\",\r\n  \"age\": 63,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Curpahuasi\",\r\n  \"phoneNumber\": \"+51 (872) 817-2159\",\r\n  \"identityDocument\": \"437-760-0036\"\r\n}, {\r\n  \"name\": \"Latlux\",\r\n  \"email\": \"rgrene1g@furl.net\",\r\n  \"age\": 43,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Xinan\",\r\n  \"phoneNumber\": \"+86 (866) 746-5129\",\r\n  \"identityDocument\": \"922-426-9767\"\r\n}, {\r\n  \"name\": \"Fixflex\",\r\n  \"email\": \"kmazey1h@mapy.cz\",\r\n  \"age\": 31,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Växjö\",\r\n  \"phoneNumber\": \"+46 (800) 578-4031\",\r\n  \"identityDocument\": \"891-511-7582\"\r\n}, {\r\n  \"name\": \"Fixflex\",\r\n  \"email\": \"sguidotti1i@opera.com\",\r\n  \"age\": 52,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Olavarría\",\r\n  \"phoneNumber\": \"+54 (103) 830-5292\",\r\n  \"identityDocument\": \"347-724-6309\"\r\n}, {\r\n  \"name\": \"Zamit\",\r\n  \"email\": \"hgarric1j@imageshack.us\",\r\n  \"age\": 60,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Kimito\",\r\n  \"phoneNumber\": \"+358 (449) 292-8315\",\r\n  \"identityDocument\": \"384-276-2361\"\r\n}, {\r\n  \"name\": \"Veribet\",\r\n  \"email\": \"ffurzey1k@github.io\",\r\n  \"age\": 36,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"La Habana Vieja\",\r\n  \"phoneNumber\": \"+53 (556) 929-1925\",\r\n  \"identityDocument\": \"502-613-7444\"\r\n}, {\r\n  \"name\": \"Vagram\",\r\n  \"email\": \"jstokey1l@blogtalkradio.com\",\r\n  \"age\": 35,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Phatthalung\",\r\n  \"phoneNumber\": \"+66 (278) 887-2325\",\r\n  \"identityDocument\": \"819-171-1307\"\r\n}, {\r\n  \"name\": \"Home Ing\",\r\n  \"email\": \"sditch1m@go.com\",\r\n  \"age\": 22,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Polloc\",\r\n  \"phoneNumber\": \"+63 (138) 387-8411\",\r\n  \"identityDocument\": \"684-488-6849\"\r\n}, {\r\n  \"name\": \"Toughjoyfax\",\r\n  \"email\": \"lankrett1n@usgs.gov\",\r\n  \"age\": 36,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Halmstad\",\r\n  \"phoneNumber\": \"+46 (771) 477-8263\",\r\n  \"identityDocument\": \"809-582-7097\"\r\n}, {\r\n  \"name\": \"Gembucket\",\r\n  \"email\": \"dprosh1o@youtu.be\",\r\n  \"age\": 75,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Lugovskoy\",\r\n  \"phoneNumber\": \"+7 (680) 474-5298\",\r\n  \"identityDocument\": \"917-677-2676\"\r\n}, {\r\n  \"name\": \"Bitwolf\",\r\n  \"email\": \"ounderwood1p@odnoklassniki.ru\",\r\n  \"age\": 44,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Liushui\",\r\n  \"phoneNumber\": \"+86 (418) 598-0081\",\r\n  \"identityDocument\": \"843-891-3875\"\r\n}, {\r\n  \"name\": \"Viva\",\r\n  \"email\": \"kcowing1q@wiley.com\",\r\n  \"age\": 50,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Situ\",\r\n  \"phoneNumber\": \"+86 (261) 269-6760\",\r\n  \"identityDocument\": \"199-593-1042\"\r\n}, {\r\n  \"name\": \"Holdlamis\",\r\n  \"email\": \"vbachelor1r@hugedomains.com\",\r\n  \"age\": 76,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Nanqi\",\r\n  \"phoneNumber\": \"+86 (378) 231-2075\",\r\n  \"identityDocument\": \"346-347-0968\"\r\n}, {\r\n  \"name\": \"Cardify\",\r\n  \"email\": \"lomullaney1s@wikimedia.org\",\r\n  \"age\": 53,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"El Cantón de San Pablo\",\r\n  \"phoneNumber\": \"+57 (979) 121-2127\",\r\n  \"identityDocument\": \"144-890-3779\"\r\n}, {\r\n  \"name\": \"Domainer\",\r\n  \"email\": \"dscawton1t@amazon.com\",\r\n  \"age\": 65,\r\n  \"gender\": \"Genderfluid\",\r\n  \"city\": \"Xinshi\",\r\n  \"phoneNumber\": \"+86 (546) 261-5968\",\r\n  \"identityDocument\": \"210-198-8641\"\r\n}, {\r\n  \"name\": \"Cardguard\",\r\n  \"email\": \"mcollington1u@histats.com\",\r\n  \"age\": 53,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Borzna\",\r\n  \"phoneNumber\": \"+380 (966) 705-6746\",\r\n  \"identityDocument\": \"811-584-8996\"\r\n}, {\r\n  \"name\": \"Bitchip\",\r\n  \"email\": \"breoch1v@behance.net\",\r\n  \"age\": 21,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Vista Hermosa\",\r\n  \"phoneNumber\": \"+52 (336) 650-2780\",\r\n  \"identityDocument\": \"795-530-2009\"\r\n}, {\r\n  \"name\": \"Zontrax\",\r\n  \"email\": \"wadao1w@simplemachines.org\",\r\n  \"age\": 66,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Nara\",\r\n  \"phoneNumber\": \"+223 (420) 424-7345\",\r\n  \"identityDocument\": \"420-432-1601\"\r\n}, {\r\n  \"name\": \"Sonsing\",\r\n  \"email\": \"eorpyne1x@google.ru\",\r\n  \"age\": 61,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Cucuyagua\",\r\n  \"phoneNumber\": \"+504 (283) 845-9370\",\r\n  \"identityDocument\": \"377-926-5086\"\r\n}, {\r\n  \"name\": \"Fintone\",\r\n  \"email\": \"ccleator1y@privacy.gov.au\",\r\n  \"age\": 72,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Podkumskiy\",\r\n  \"phoneNumber\": \"+7 (438) 739-6234\",\r\n  \"identityDocument\": \"406-550-6768\"\r\n}, {\r\n  \"name\": \"It\",\r\n  \"email\": \"strainer1z@lycos.com\",\r\n  \"age\": 78,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Shiraz\",\r\n  \"phoneNumber\": \"+98 (369) 431-6527\",\r\n  \"identityDocument\": \"455-691-4029\"\r\n}, {\r\n  \"name\": \"Bitchip\",\r\n  \"email\": \"rfrankowski20@mapquest.com\",\r\n  \"age\": 37,\r\n  \"gender\": \"Non-binary\",\r\n  \"city\": \"Lyuban’\",\r\n  \"phoneNumber\": \"+7 (254) 121-6535\",\r\n  \"identityDocument\": \"419-143-8603\"\r\n}, {\r\n  \"name\": \"Greenlam\",\r\n  \"email\": \"kbarchrameev21@examiner.com\",\r\n  \"age\": 64,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Huanxi\",\r\n  \"phoneNumber\": \"+86 (231) 477-9222\",\r\n  \"identityDocument\": \"404-483-4376\"\r\n}, {\r\n  \"name\": \"Overhold\",\r\n  \"email\": \"cmahady22@about.me\",\r\n  \"age\": 79,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Beauvais\",\r\n  \"phoneNumber\": \"+33 (355) 847-8669\",\r\n  \"identityDocument\": \"159-799-4309\"\r\n}, {\r\n  \"name\": \"Overhold\",\r\n  \"email\": \"kparker23@alexa.com\",\r\n  \"age\": 58,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Labo\",\r\n  \"phoneNumber\": \"+63 (359) 499-8236\",\r\n  \"identityDocument\": \"705-268-0024\"\r\n}, {\r\n  \"name\": \"Rank\",\r\n  \"email\": \"ctwinning24@amazon.de\",\r\n  \"age\": 79,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Zhuge\",\r\n  \"phoneNumber\": \"+86 (700) 127-0453\",\r\n  \"identityDocument\": \"617-208-5136\"\r\n}, {\r\n  \"name\": \"Zathin\",\r\n  \"email\": \"mkornacki25@census.gov\",\r\n  \"age\": 54,\r\n  \"gender\": \"Genderqueer\",\r\n  \"city\": \"Edsbyn\",\r\n  \"phoneNumber\": \"+46 (288) 400-5047\",\r\n  \"identityDocument\": \"202-391-6124\"\r\n}, {\r\n  \"name\": \"Alpha\",\r\n  \"email\": \"mivel26@goo.ne.jp\",\r\n  \"age\": 62,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Lecheng\",\r\n  \"phoneNumber\": \"+86 (442) 347-8720\",\r\n  \"identityDocument\": \"841-671-7976\"\r\n}, {\r\n  \"name\": \"Span\",\r\n  \"email\": \"srivilis27@bloglines.com\",\r\n  \"age\": 49,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Podkamennaya Tunguska\",\r\n  \"phoneNumber\": \"+7 (490) 326-2179\",\r\n  \"identityDocument\": \"998-356-9102\"\r\n}, {\r\n  \"name\": \"Tempsoft\",\r\n  \"email\": \"pblakey28@storify.com\",\r\n  \"age\": 48,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Semamung\",\r\n  \"phoneNumber\": \"+62 (866) 501-2625\",\r\n  \"identityDocument\": \"641-481-3040\"\r\n}, {\r\n  \"name\": \"It\",\r\n  \"email\": \"jmallon29@nps.gov\",\r\n  \"age\": 24,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Markaz Bilād aţ Ţa‘ām\",\r\n  \"phoneNumber\": \"+967 (202) 394-5276\",\r\n  \"identityDocument\": \"685-736-1644\"\r\n}, {\r\n  \"name\": \"Asoka\",\r\n  \"email\": \"fbrigginshaw2a@nature.com\",\r\n  \"age\": 50,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Lons-le-Saunier\",\r\n  \"phoneNumber\": \"+33 (801) 451-5020\",\r\n  \"identityDocument\": \"817-315-6924\"\r\n}, {\r\n  \"name\": \"Regrant\",\r\n  \"email\": \"iboyan2b@t.co\",\r\n  \"age\": 62,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Caloue\",\r\n  \"phoneNumber\": \"+62 (609) 615-4930\",\r\n  \"identityDocument\": \"208-473-2882\"\r\n}, {\r\n  \"name\": \"Veribet\",\r\n  \"email\": \"mrycraft2c@angelfire.com\",\r\n  \"age\": 26,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Gondifelos\",\r\n  \"phoneNumber\": \"+351 (955) 111-1914\",\r\n  \"identityDocument\": \"339-992-5788\"\r\n}, {\r\n  \"name\": \"Transcof\",\r\n  \"email\": \"ooduilleain2d@globo.com\",\r\n  \"age\": 61,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"‘Arīshah\",\r\n  \"phoneNumber\": \"+963 (775) 608-6001\",\r\n  \"identityDocument\": \"374-505-0017\"\r\n}, {\r\n  \"name\": \"Zaam-Dox\",\r\n  \"email\": \"rescalante2e@rediff.com\",\r\n  \"age\": 40,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Gornyy\",\r\n  \"phoneNumber\": \"+7 (587) 381-3435\",\r\n  \"identityDocument\": \"426-936-6463\"\r\n}, {\r\n  \"name\": \"Tresom\",\r\n  \"email\": \"bmarchington2f@ustream.tv\",\r\n  \"age\": 80,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Almaguer North\",\r\n  \"phoneNumber\": \"+63 (526) 250-6869\",\r\n  \"identityDocument\": \"736-146-0999\"\r\n}, {\r\n  \"name\": \"Prodder\",\r\n  \"email\": \"tbaxster2g@reference.com\",\r\n  \"age\": 65,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Zhangfeng\",\r\n  \"phoneNumber\": \"+86 (877) 727-7410\",\r\n  \"identityDocument\": \"165-381-7340\"\r\n}, {\r\n  \"name\": \"Bitwolf\",\r\n  \"email\": \"crocco2h@google.co.jp\",\r\n  \"age\": 73,\r\n  \"gender\": \"Genderfluid\",\r\n  \"city\": \"Naru\",\r\n  \"phoneNumber\": \"+62 (572) 832-1392\",\r\n  \"identityDocument\": \"743-140-5237\"\r\n}, {\r\n  \"name\": \"Tampflex\",\r\n  \"email\": \"ifrosdick2i@nationalgeographic.com\",\r\n  \"age\": 75,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Belung Satu\",\r\n  \"phoneNumber\": \"+62 (646) 926-4395\",\r\n  \"identityDocument\": \"580-323-3274\"\r\n}, {\r\n  \"name\": \"Ventosanzap\",\r\n  \"email\": \"smunkley2j@zdnet.com\",\r\n  \"age\": 79,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Dolno Palčište\",\r\n  \"phoneNumber\": \"+389 (445) 909-4112\",\r\n  \"identityDocument\": \"792-144-1557\"\r\n}, {\r\n  \"name\": \"Ventosanzap\",\r\n  \"email\": \"mkleingrub2k@comcast.net\",\r\n  \"age\": 72,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Obuasi\",\r\n  \"phoneNumber\": \"+233 (325) 612-7995\",\r\n  \"identityDocument\": \"379-595-8946\"\r\n}, {\r\n  \"name\": \"Trippledex\",\r\n  \"email\": \"sstillman2l@go.com\",\r\n  \"age\": 54,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Jitan\",\r\n  \"phoneNumber\": \"+86 (236) 561-9681\",\r\n  \"identityDocument\": \"431-499-9437\"\r\n}, {\r\n  \"name\": \"Mat Lam Tam\",\r\n  \"email\": \"shaldon2m@loc.gov\",\r\n  \"age\": 54,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Santa Cruz del Sur\",\r\n  \"phoneNumber\": \"+53 (597) 941-7064\",\r\n  \"identityDocument\": \"864-889-9275\"\r\n}, {\r\n  \"name\": \"Ventosanzap\",\r\n  \"email\": \"hmuckle2n@scribd.com\",\r\n  \"age\": 79,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Bureya\",\r\n  \"phoneNumber\": \"+7 (160) 163-1158\",\r\n  \"identityDocument\": \"838-477-1929\"\r\n}, {\r\n  \"name\": \"Zaam-Dox\",\r\n  \"email\": \"lbase2o@edublogs.org\",\r\n  \"age\": 47,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Pleven\",\r\n  \"phoneNumber\": \"+359 (875) 982-2407\",\r\n  \"identityDocument\": \"709-253-6989\"\r\n}, {\r\n  \"name\": \"Sub-Ex\",\r\n  \"email\": \"klowin2p@feedburner.com\",\r\n  \"age\": 37,\r\n  \"gender\": \"Male\",\r\n  \"city\": \"Enschede\",\r\n  \"phoneNumber\": \"+31 (246) 994-2340\",\r\n  \"identityDocument\": \"720-976-5592\"\r\n}, {\r\n  \"name\": \"Wrapsafe\",\r\n  \"email\": \"agodden2q@seesaa.net\",\r\n  \"age\": 40,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Perpignan\",\r\n  \"phoneNumber\": \"+33 (477) 726-7423\",\r\n  \"identityDocument\": \"441-400-6730\"\r\n}, {\r\n  \"name\": \"Holdlamis\",\r\n  \"email\": \"ptruesdale2r@dyndns.org\",\r\n  \"age\": 26,\r\n  \"gender\": \"Female\",\r\n  \"city\": \"Thị Trấn Tân Yên\",\r\n  \"phoneNumber\": \"+84 (348) 763-4887\",\r\n  \"identityDocument\": \"817-348-0164\"\r\n}]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/customers/fillData",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customers",
+								"fillData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete all data",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employees",
+			"item": [
+				{
+					"name": "Create Employee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"pedro\",\r\n    \"phoneNumber\": \"3002002020\",\r\n    \"identityDocument\": \"1000444777\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/employees/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Employee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/customers/delete/624a47421f8ec13640a03e72",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"customers",
+								"delete",
+								"624a47421f8ec13640a03e72"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Employee by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/employees/find/624a489a1f8ec13640a03e76",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees",
+								"find",
+								"624a489a1f8ec13640a03e76"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Employees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/employees",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fill data employeee",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete all data",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"supplierId\": 1,\r\n    \"name\": \"tornillo\",\r\n    \"description\": \"tornillo de una pulgada\",\r\n    \"price\": 500.0,\r\n    \"minAmount\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/products/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/products/delete/624a479a1f8ec13640a03e73",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"delete",
+								"624a479a1f8ec13640a03e73"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Product by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/products/find/624a48e11f8ec13640a03e77",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"find",
+								"624a48e11f8ec13640a03e77"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Suppliers",
+			"item": [
+				{
+					"name": "Create Supplier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ramiro\",\r\n    \"identityDocument\": \"2065487963\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/suppliers/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"suppliers",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Supplier",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/suppliers/delete/624a47da1f8ec13640a03e74",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"suppliers",
+								"delete",
+								"624a47da1f8ec13640a03e74"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Supplier by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/suppliers/find/624a48ec1f8ec13640a03e78",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"suppliers",
+								"find",
+								"624a48ec1f8ec13640a03e78"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Suppliers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/suppliers",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fill Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n  \"name\": \"Lorenzo Monnery\",\r\n  \"identityDocument\": \"527-81-4725\"\r\n}, {\r\n  \"name\": \"Richard Game\",\r\n  \"identityDocument\": \"308-14-8767\"\r\n}, {\r\n  \"name\": \"Christa Hedan\",\r\n  \"identityDocument\": \"589-10-9358\"\r\n}, {\r\n  \"name\": \"Con Mashro\",\r\n  \"identityDocument\": \"752-67-2990\"\r\n}, {\r\n  \"name\": \"Iggie Lorinez\",\r\n  \"identityDocument\": \"394-70-3806\"\r\n}, {\r\n  \"name\": \"Ellette Billany\",\r\n  \"identityDocument\": \"605-48-7000\"\r\n}, {\r\n  \"name\": \"Duffy Blofeld\",\r\n  \"identityDocument\": \"763-90-0988\"\r\n}, {\r\n  \"name\": \"Trey Smewing\",\r\n  \"identityDocument\": \"692-70-2699\"\r\n}, {\r\n  \"name\": \"Niccolo Caren\",\r\n  \"identityDocument\": \"240-21-7244\"\r\n}, {\r\n  \"name\": \"Prentice Myring\",\r\n  \"identityDocument\": \"189-20-2589\"\r\n}, {\r\n  \"name\": \"Gaven Liger\",\r\n  \"identityDocument\": \"112-25-2259\"\r\n}, {\r\n  \"name\": \"Anastasie Nassi\",\r\n  \"identityDocument\": \"213-01-0063\"\r\n}, {\r\n  \"name\": \"Hayley McGibbon\",\r\n  \"identityDocument\": \"659-73-8737\"\r\n}, {\r\n  \"name\": \"Shep Holborn\",\r\n  \"identityDocument\": \"761-71-4365\"\r\n}, {\r\n  \"name\": \"Freeman Heindl\",\r\n  \"identityDocument\": \"637-86-1910\"\r\n}, {\r\n  \"name\": \"Allin Rayment\",\r\n  \"identityDocument\": \"429-35-7637\"\r\n}, {\r\n  \"name\": \"Emilie Lermit\",\r\n  \"identityDocument\": \"279-27-7729\"\r\n}, {\r\n  \"name\": \"Titos McLaren\",\r\n  \"identityDocument\": \"156-05-1476\"\r\n}, {\r\n  \"name\": \"Corenda Semeniuk\",\r\n  \"identityDocument\": \"324-36-6044\"\r\n}, {\r\n  \"name\": \"Reube Preator\",\r\n  \"identityDocument\": \"428-82-1808\"\r\n}, {\r\n  \"name\": \"Crawford Bluschke\",\r\n  \"identityDocument\": \"567-98-9750\"\r\n}, {\r\n  \"name\": \"Archibald Huxham\",\r\n  \"identityDocument\": \"735-70-1357\"\r\n}, {\r\n  \"name\": \"Abraham Hemms\",\r\n  \"identityDocument\": \"209-30-7173\"\r\n}, {\r\n  \"name\": \"Pru Chadband\",\r\n  \"identityDocument\": \"182-42-8276\"\r\n}, {\r\n  \"name\": \"Marjie Chantillon\",\r\n  \"identityDocument\": \"832-54-6977\"\r\n}, {\r\n  \"name\": \"Etheline Keaves\",\r\n  \"identityDocument\": \"220-25-7663\"\r\n}, {\r\n  \"name\": \"Emelen Piens\",\r\n  \"identityDocument\": \"776-37-2511\"\r\n}, {\r\n  \"name\": \"Merci Trevena\",\r\n  \"identityDocument\": \"599-36-5420\"\r\n}, {\r\n  \"name\": \"Salomi Creebo\",\r\n  \"identityDocument\": \"813-51-9971\"\r\n}, {\r\n  \"name\": \"Franky De Paoli\",\r\n  \"identityDocument\": \"857-04-6045\"\r\n}, {\r\n  \"name\": \"Massimo Grieveson\",\r\n  \"identityDocument\": \"215-97-6386\"\r\n}, {\r\n  \"name\": \"Currie Filby\",\r\n  \"identityDocument\": \"683-08-4820\"\r\n}, {\r\n  \"name\": \"Bridget Kynd\",\r\n  \"identityDocument\": \"820-65-2306\"\r\n}, {\r\n  \"name\": \"Alastair Hort\",\r\n  \"identityDocument\": \"793-09-4040\"\r\n}, {\r\n  \"name\": \"Keene Meake\",\r\n  \"identityDocument\": \"414-47-0666\"\r\n}, {\r\n  \"name\": \"Adolphus Crommett\",\r\n  \"identityDocument\": \"307-19-2953\"\r\n}, {\r\n  \"name\": \"Riki Cail\",\r\n  \"identityDocument\": \"242-42-2761\"\r\n}, {\r\n  \"name\": \"Benita Milthorpe\",\r\n  \"identityDocument\": \"562-29-3654\"\r\n}, {\r\n  \"name\": \"Ian Chasles\",\r\n  \"identityDocument\": \"155-09-2375\"\r\n}, {\r\n  \"name\": \"Caroline King\",\r\n  \"identityDocument\": \"864-67-9287\"\r\n}, {\r\n  \"name\": \"Bellanca Richardt\",\r\n  \"identityDocument\": \"227-46-6972\"\r\n}, {\r\n  \"name\": \"Jaquenetta Canet\",\r\n  \"identityDocument\": \"737-60-7050\"\r\n}, {\r\n  \"name\": \"Wilhelmine Grigorkin\",\r\n  \"identityDocument\": \"380-69-9520\"\r\n}, {\r\n  \"name\": \"Godart Mullinder\",\r\n  \"identityDocument\": \"197-73-3834\"\r\n}, {\r\n  \"name\": \"Alyosha Prall\",\r\n  \"identityDocument\": \"157-48-0679\"\r\n}, {\r\n  \"name\": \"Josephina Crocroft\",\r\n  \"identityDocument\": \"231-35-5905\"\r\n}, {\r\n  \"name\": \"Estel Gooden\",\r\n  \"identityDocument\": \"852-91-3202\"\r\n}, {\r\n  \"name\": \"Isaak Clayson\",\r\n  \"identityDocument\": \"507-86-5253\"\r\n}, {\r\n  \"name\": \"Cherilynn Wilkes\",\r\n  \"identityDocument\": \"534-15-3085\"\r\n}, {\r\n  \"name\": \"Edee Irnys\",\r\n  \"identityDocument\": \"549-25-7596\"\r\n}, {\r\n  \"name\": \"Lawry Libby\",\r\n  \"identityDocument\": \"894-64-8316\"\r\n}, {\r\n  \"name\": \"Harlan Parlour\",\r\n  \"identityDocument\": \"555-82-7367\"\r\n}, {\r\n  \"name\": \"Inglis Trembley\",\r\n  \"identityDocument\": \"286-97-5760\"\r\n}, {\r\n  \"name\": \"Lucky Maxfield\",\r\n  \"identityDocument\": \"686-76-2182\"\r\n}, {\r\n  \"name\": \"Keefe McKue\",\r\n  \"identityDocument\": \"675-86-4217\"\r\n}, {\r\n  \"name\": \"Walton Brandes\",\r\n  \"identityDocument\": \"310-05-4330\"\r\n}, {\r\n  \"name\": \"Veronika Farguhar\",\r\n  \"identityDocument\": \"250-25-9520\"\r\n}, {\r\n  \"name\": \"Bernarr Schanke\",\r\n  \"identityDocument\": \"875-01-7495\"\r\n}, {\r\n  \"name\": \"Ada Duckerin\",\r\n  \"identityDocument\": \"652-72-7317\"\r\n}, {\r\n  \"name\": \"Artair Patise\",\r\n  \"identityDocument\": \"177-36-5191\"\r\n}, {\r\n  \"name\": \"Ruby Mucklow\",\r\n  \"identityDocument\": \"723-91-2015\"\r\n}, {\r\n  \"name\": \"Rozanne Stubbes\",\r\n  \"identityDocument\": \"239-41-3383\"\r\n}, {\r\n  \"name\": \"Aeriela Maides\",\r\n  \"identityDocument\": \"370-41-3685\"\r\n}, {\r\n  \"name\": \"Damara Abley\",\r\n  \"identityDocument\": \"246-42-9149\"\r\n}, {\r\n  \"name\": \"Guenevere Biddle\",\r\n  \"identityDocument\": \"664-19-4895\"\r\n}, {\r\n  \"name\": \"Ketti Drinkhall\",\r\n  \"identityDocument\": \"563-65-4382\"\r\n}, {\r\n  \"name\": \"Kasey Eringey\",\r\n  \"identityDocument\": \"864-61-3875\"\r\n}, {\r\n  \"name\": \"Pasquale Wetherick\",\r\n  \"identityDocument\": \"148-64-4598\"\r\n}, {\r\n  \"name\": \"Bondon Acaster\",\r\n  \"identityDocument\": \"134-67-0798\"\r\n}, {\r\n  \"name\": \"Abramo Looker\",\r\n  \"identityDocument\": \"279-20-0333\"\r\n}, {\r\n  \"name\": \"Stefan Humbee\",\r\n  \"identityDocument\": \"177-64-6460\"\r\n}, {\r\n  \"name\": \"Letti Polini\",\r\n  \"identityDocument\": \"237-48-6464\"\r\n}, {\r\n  \"name\": \"Toby Willcock\",\r\n  \"identityDocument\": \"245-70-7982\"\r\n}, {\r\n  \"name\": \"Roddie Talbot\",\r\n  \"identityDocument\": \"336-64-7612\"\r\n}, {\r\n  \"name\": \"Aldis Lindop\",\r\n  \"identityDocument\": \"126-22-3704\"\r\n}, {\r\n  \"name\": \"Helli Tenant\",\r\n  \"identityDocument\": \"762-93-8598\"\r\n}, {\r\n  \"name\": \"Griffie Bohling\",\r\n  \"identityDocument\": \"828-95-3321\"\r\n}, {\r\n  \"name\": \"Clarine Fellgett\",\r\n  \"identityDocument\": \"692-42-8445\"\r\n}, {\r\n  \"name\": \"Camel Lettsom\",\r\n  \"identityDocument\": \"407-92-0774\"\r\n}, {\r\n  \"name\": \"Shirline Gerrets\",\r\n  \"identityDocument\": \"471-47-6942\"\r\n}]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/suppliers/fillData",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"suppliers",
+								"fillData"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete all data",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transactions",
+			"item": [
+				{
+					"name": "Create Transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"6249e3cc9eb20f4cb72774d1\",\r\n    \"billId\":\"6249db001bb8ef436f23f1b6\",\r\n    \"amount\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/transactions/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"transactions",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Transaction",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/transactions/delete/624a47da1f8ec13640a03e74",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"transactions",
+								"delete",
+								"624a47da1f8ec13640a03e74"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Transaction by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/transactions/find/624a48f81f8ec13640a03e79",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"transactions",
+								"find",
+								"624a48f81f8ec13640a03e79"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find All Transactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/transactions",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
